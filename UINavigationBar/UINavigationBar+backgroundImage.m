@@ -47,9 +47,10 @@ static void UINavigationItemView_drawTextInRect(id self, SEL _cmd, NSString *str
 
 static UIColor *UIButtonLabel_textColor(id self, SEL _cmd)  
 {  
-    //[UINavigationBar inspectView:pv level:@""];
     if ([[self superview] isKindOfClass:NSClassFromString(@"UINavigationButton")] &&
-        [[[self superview] superview] isKindOfClass:NSClassFromString(@"UINavigationBar")]) 
+        [[[self superview] superview] isKindOfClass:NSClassFromString(@"UINavigationBar")] &&
+        ([(UINavigationBar *)[[self superview] superview] barStyle] == UIBarStyleDefault)
+        ) 
     {  
         //return [UIColor blackColor];  
         return [UIColor colorWithRed:51/255.0f green:51/255.0f blue:51/255.0f alpha:1.0f];
@@ -63,8 +64,10 @@ static UIColor *UIButtonLabel_textColor(id self, SEL _cmd)
 static UIColor *UIButtonLabel_shadowColor(id self, SEL _cmd)  
 {  
     if ([[self superview] isKindOfClass:NSClassFromString(@"UINavigationButton")] &&
-        [[[self superview] superview] isKindOfClass:NSClassFromString(@"UINavigationBar")]) 
-    {  
+        [[[self superview] superview] isKindOfClass:NSClassFromString(@"UINavigationBar")] &&
+        ([(UINavigationBar *)[[self superview] superview] barStyle] == UIBarStyleDefault)
+        ) 
+    {   
         //return [UIColor whiteColor];  
         return [UIColor colorWithRed:241/255.0f green:191/255.0f blue:149/255.0f alpha:1.0f];
     } else {  
