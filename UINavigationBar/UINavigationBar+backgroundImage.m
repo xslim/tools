@@ -48,12 +48,12 @@ static void UINavigationItemView_drawTextInRect(id self, SEL _cmd, NSString *str
 static UIColor *UIButtonLabel_textColor(id self, SEL _cmd)  
 {  
     if ([[self superview] isKindOfClass:NSClassFromString(@"UINavigationButton")] &&
-        [[[self superview] superview] isKindOfClass:NSClassFromString(@"UINavigationBar")] &&
-        ([(UINavigationBar *)[[self superview] superview] barStyle] == UIBarStyleDefault)
+        [[[self superview] superview] isKindOfClass:NSClassFromString(@"UINavigationBar")]
+        //&& ([(UINavigationBar *)[[self superview] superview] barStyle] == UIBarStyleDefault)
         ) 
     {  
-        //return [UIColor blackColor];  
-        return [UIColor colorWithRed:51/255.0f green:51/255.0f blue:51/255.0f alpha:1.0f];
+        return [UIColor redColor];  
+        //return [UIColor colorWithRed:51/255.0f green:51/255.0f blue:51/255.0f alpha:1.0f];
     } else {  
         struct objc_super super = { self, [UILabel class] };  
         return objc_msgSendSuper(&super, _cmd);  
@@ -64,12 +64,12 @@ static UIColor *UIButtonLabel_textColor(id self, SEL _cmd)
 static UIColor *UIButtonLabel_shadowColor(id self, SEL _cmd)  
 {  
     if ([[self superview] isKindOfClass:NSClassFromString(@"UINavigationButton")] &&
-        [[[self superview] superview] isKindOfClass:NSClassFromString(@"UINavigationBar")] &&
-        ([(UINavigationBar *)[[self superview] superview] barStyle] == UIBarStyleDefault)
+        [[[self superview] superview] isKindOfClass:NSClassFromString(@"UINavigationBar")]
+        //&& ([(UINavigationBar *)[[self superview] superview] barStyle] == UIBarStyleDefault)
         ) 
     {   
-        //return [UIColor whiteColor];  
-        return [UIColor colorWithRed:241/255.0f green:191/255.0f blue:149/255.0f alpha:1.0f];
+        return [UIColor greenColor];  
+        //return [UIColor colorWithRed:241/255.0f green:191/255.0f blue:149/255.0f alpha:1.0f];
     } else {  
         struct objc_super super = { self, [UILabel class] };  
         return objc_msgSendSuper(&super, _cmd);  
@@ -128,9 +128,10 @@ static void UIButtonLabel_setShadowOffset(id self, SEL _cmd, CGSize offset)
     Method method;
     
     // Call default implementation
-    if (self.barStyle != UIBarStyleDefault) {
+    
+    if (self.barStyle == UIBarStyleBlackTranslucent) {
         [self drawRectCustomBackground:rect];
-        
+        /*
         class = NSClassFromString(@"UINavigationItemView");
         if (class) {  
             method = class_getInstanceMethod(class, NSSelectorFromString(@"drawText:inRect:"));
@@ -138,7 +139,7 @@ static void UIButtonLabel_setShadowOffset(id self, SEL _cmd, CGSize offset)
                 method_setImplementation(method, (IMP)UINavigationItemView_original_drawTextInRect);
             }
         }
-        
+        */
         return;
     }
     
