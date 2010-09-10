@@ -25,8 +25,8 @@ if ($acme1) $body['acme1'] = $acme1;
 
 /* End of Configurable Items */
 $ctx = stream_context_create();
-stream_context_set_option($ctx, 'ssl', '', 'key.pem');
-//stream_context_set_option($ctx, 'ssl', 'passphrase', '');
+stream_context_set_option($ctx, 'ssl', 'local_cert', 'ck.pem');
+stream_context_set_option($ctx, 'ssl', 'passphrase', '1111');
 
 $fp = stream_socket_client('ssl://gateway.sandbox.push.apple.com:2195', $err, $errstr, 60, STREAM_CLIENT_CONNECT, $ctx);
 //$fp = stream_socket_client('ssl://gateway.push.apple.com:2195', $err, $errstr, 60, STREAM_CLIENT_CONNECT, $ctx);

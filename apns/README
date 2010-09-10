@@ -1,0 +1,4 @@
+
+Put Certificate.p12
+Run ./generate_pem.sh
+Set PEM Password to 1111
