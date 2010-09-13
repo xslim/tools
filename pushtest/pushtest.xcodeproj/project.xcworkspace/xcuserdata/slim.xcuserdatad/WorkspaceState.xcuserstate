@@ -1221,12 +1221,7 @@
 				<integer>31</integer>
 			</dict>
 			<key>NS.objects</key>
-			<array>
-				<dict>
-					<key>CF$UID</key>
-					<integer>3</integer>
-				</dict>
-			</array>
+			<array/>
 		</dict>
 		<dict>
 			<key>$class</key>
@@ -1856,7 +1851,7 @@
 			</dict>
 		</dict>
 		<string>file://localhost/Users/slim/Documents/src/tools/pushtest/Classes/PushViewController.m</string>
-		<real>306082420.19784099</real>
+		<real>306082432.39474303</real>
 		<dict>
 			<key>$classes</key>
 			<array>
@@ -1913,9 +1908,9 @@
 				</dict>
 			</array>
 		</dict>
-		<string>{1977, 0}</string>
-		<real>306082421.06612998</real>
-		<string>{1559, 651}</string>
+		<string>{2007, 0}</string>
+		<real>306082586.96706003</real>
+		<string>{1499, 742}</string>
 		<string>Xcode.IDEKit.EditorDocument.SourceCode</string>
 		<dict>
 			<key>$class</key>
