@@ -1,4 +1,12 @@
 <?php
+
+/**
+ * APNS test
+ * Developed by Taras Kalapun <t.kalapun@gmail.com>
+ * http://kalapoun.com
+ * Free for beer!
+ */
+
 /*
 Usage:
 http://127.0.0.1/apns/apns.php?message=Hello%20from%20macoscoders&badge=2&sound=received5.caf

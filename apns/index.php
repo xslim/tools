@@ -1,5 +1,12 @@
 <?php
 
+/**
+ * APNS test
+ * Developed by Taras Kalapun <t.kalapun@gmail.com>
+ * http://kalapoun.com
+ * Free for beer!
+ */
+
 $iniFile = 'config.ini';
 
 $config = parse_ini_file($iniFile, true);

@@ -1,5 +1,12 @@
 <?php
 
+/**
+ * APNS test
+ * Developed by Taras Kalapun <t.kalapun@gmail.com>
+ * http://kalapoun.com
+ * Free for beer!
+ */
+
 $appId = (!empty($_REQUEST['appId'])) ? $_REQUEST['appId'] : '';
 $deviceToken = (!empty($_REQUEST['deviceToken'])) ? $_REQUEST['deviceToken'] : '';
 
