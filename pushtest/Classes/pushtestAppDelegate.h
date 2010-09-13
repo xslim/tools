@@ -8,10 +8,14 @@
 
 #import <UIKit/UIKit.h>
 
+@class PushViewController;
+
 @interface pushtestAppDelegate : NSObject <UIApplicationDelegate> {
     UIWindow *window;
+    PushViewController *pushViewController;
 }
 
 @property (nonatomic, retain) IBOutlet UIWindow *window;
+@property (nonatomic, retain) IBOutlet PushViewController *pushViewController;
 
 @end

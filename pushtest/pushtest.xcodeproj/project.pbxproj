@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		55708100123E6D15004D9E7D /* PushViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 557080FE123E6D15004D9E7D /* PushViewController.m */; };
+		55708103123E6DB8004D9E7D /* PushView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 55708102123E6DB8004D9E7D /* PushView.xib */; };
 		55E92E4B123A299000A63D80 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 55E92E4A123A299000A63D80 /* UIKit.framework */; };
 		55E92E4D123A299000A63D80 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 55E92E4C123A299000A63D80 /* Foundation.framework */; };
 		55E92E4F123A299000A63D80 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 55E92E4E123A299000A63D80 /* CoreGraphics.framework */; };
@@ -17,6 +19,9 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		557080FD123E6D15004D9E7D /* PushViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PushViewController.h; sourceTree = "<group>"; };
+		557080FE123E6D15004D9E7D /* PushViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PushViewController.m; sourceTree = "<group>"; };
+		55708102123E6DB8004D9E7D /* PushView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PushView.xib; sourceTree = "<group>"; };
 		55E92E47123A299000A63D80 /* pushtest.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = pushtest.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		55E92E4A123A299000A63D80 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		55E92E4C123A299000A63D80 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -60,6 +65,9 @@
 			children = (
 				55E92E57123A299000A63D80 /* pushtestAppDelegate.h */,
 				55E92E58123A299000A63D80 /* pushtestAppDelegate.m */,
+				557080FD123E6D15004D9E7D /* PushViewController.h */,
+				557080FE123E6D15004D9E7D /* PushViewController.m */,
+				55708102123E6DB8004D9E7D /* PushView.xib */,
 			);
 			path = Classes;
 			sourceTree = "<group>";
@@ -150,6 +158,7 @@
 			files = (
 				55E92E54123A299000A63D80 /* InfoPlist.strings in Resources */,
 				55E92E5C123A299000A63D80 /* MainWindow.xib in Resources */,
+				55708103123E6DB8004D9E7D /* PushView.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -162,6 +171,7 @@
 			files = (
 				55E92E56123A299000A63D80 /* main.m in Sources */,
 				55E92E59123A299000A63D80 /* pushtestAppDelegate.m in Sources */,
+				55708100123E6D15004D9E7D /* PushViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

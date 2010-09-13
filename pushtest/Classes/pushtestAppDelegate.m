@@ -7,11 +7,12 @@
 //
 
 #import "pushtestAppDelegate.h"
+#import "PushViewController.h"
 
 @implementation pushtestAppDelegate
 
 
-@synthesize window;
+@synthesize window, pushViewController;
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions 
 {
@@ -26,6 +27,7 @@
 	}
     
     // Override point for customization after application launch.
+    [window addSubview:pushViewController.view];
     [window makeKeyAndVisible];
     return YES;
 }
@@ -37,6 +39,7 @@
 
 - (void)dealloc {
 
+    [pushViewController release];
     [window release];
     [super dealloc];
 }
@@ -49,7 +52,12 @@
                         ntohl(tokenData[0]), ntohl(tokenData[1]), ntohl(tokenData[2]), ntohl(tokenData[3]), 
                         ntohl(tokenData[4]), ntohl(tokenData[5]), ntohl(tokenData[6]), ntohl(tokenData[7])];
     
+
+    
+    
+    
 	NSLog(@"deviceToken: %@", deviceTokenString);
+    self.pushViewController.deviceTokenField.text = deviceTokenString;
 }
 
 
