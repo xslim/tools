@@ -18,4 +18,6 @@
 @property (nonatomic, retain) IBOutlet UIWindow *window;
 @property (nonatomic, retain) IBOutlet PushViewController *pushViewController;
 
+- (void)showNotification:(NSDictionary *)notification;
+
 @end

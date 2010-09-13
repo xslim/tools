@@ -23,6 +23,7 @@
     NSDictionary *pushDictionary = [launchOptions objectForKey:UIApplicationLaunchOptionsRemoteNotificationKey];
 	if (pushDictionary != nil) {
         NSLog(@"pushDictionary : %@", pushDictionary);
+        [self showNotification:pushDictionary];
 		//[self handlePushMessage:pushDictionary];
 	}
     
@@ -73,7 +74,17 @@
 {
     
      NSLog(@"Received notification: %@", userInfo);
+    [self showNotification:userInfo];
 
+}
+
+- (void)showNotification:(NSDictionary *)notification
+{
+    NSString *msg = [NSString stringWithFormat:@"%@", notification];
+    
+    UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Incoming Push!" message:msg delegate:nil cancelButtonTitle:@"OK" otherButtonTitles:nil];
+    [alert show];
+    [alert release];
 }
 
 @end
