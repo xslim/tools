@@ -12,6 +12,7 @@ $iniFile = 'config.ini';
 $config = parse_ini_file($iniFile, true);
 
 $message = (!empty($_REQUEST['message'])) ? $_REQUEST['message'] : '';
+$badge   = (!empty($_REQUEST['badge']))   ? (int)$_REQUEST['badge']   : null;
 $appId   = (!empty($_REQUEST['appId']))   ? $_REQUEST['appId'] : '';
 
 if (!empty($message) && !empty($appId)) {
@@ -19,7 +20,7 @@ if (!empty($message) && !empty($appId)) {
 	// Construct the notification payload
 	$body = array();
 	$body['aps']['alert'] = $message;
-	//if ($badge) $body['aps']['badge'] = $badge;
+	if ($badge) $body['aps']['badge'] = $badge;
 	//if ($sound) $body['aps']['sound'] = $sound;
 	//if ($acme1) $body['acme1'] = $acme1;
 	
@@ -44,6 +45,9 @@ if (!empty($message) && !empty($appId)) {
 		
 		<b>Message:</b>
 		<input type="text" name="message" value="Hello" />
+		
+		<b>Badge:</b>
+		<input type="text" name="badge" value="" />
 		
 		<input type="submit" />
 	</form>
